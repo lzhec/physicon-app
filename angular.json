@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "physicon-app"
+    }
+  },
+  "defaultProject": "physicon-app",
+  "cli": {
+    "analytics": "de076279-9bbd-46ad-9881-ae1adc929e3f"
+  }
 }
