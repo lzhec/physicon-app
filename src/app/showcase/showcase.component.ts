@@ -73,22 +73,16 @@ export class ShowcaseComponent implements OnInit {
     });
 
     if (this.searchString) {
-      this.search();
+      this.searchByTitle();
     }
   }
 
-  search() {
+  searchByTitle() {
     if (!this.searchString) {
       this.sortByOption();
     }
 
-    this.FilteredItems = this.FilteredItems.filter(i => {
-      for (const key in i) {
-        if (i[key].toString().toLowerCase().indexOf(this.searchString) > -1) {
-          return i;
-        }
-      }
-    });
+    this.FilteredItems = this.FilteredItems.filter(i => i.title.toLowerCase().indexOf(this.searchString) > -1);
   }
 
   ngOnInit(): void {
