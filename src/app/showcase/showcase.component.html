@@ -1,1 +1,39 @@
-<p>showcase works!</p>
+<div class="container">
+  <h1 class="u-text-center">Витрина</h1>
+  <div class="form-container">
+    <div class="form">
+        <div class="select-container" *ngFor="let sortOption of sortOptions">
+          <select (change)="sortByOption()" [(ngModel)]="sortOption.mainOption">
+            <option *ngFor="let option of sortOption.options" [ngValue]="option">{{option}}</option>
+          </select>
+        </div>
+        <div class="select-container" style="display: flex">
+          <input type="text" [(ngModel)]="searchString" placeholder="Поиск" />
+          <button type="button" (click)="search()"></button>
+        </div>
+    </div>
+  </div>
+
+  <div class="switcher">
+    <button type="button" (click)="showBonus = !showBonus">Цены в {{showBonus ? 'рублях' : 'бонусах'}}</button>
+  </div>
+
+  <ul class="courses-list">
+    <li *ngFor="let item of FilteredItems" class="courses-sci">
+      <div class="sci-figure">
+
+      </div>
+      <div class="sci-info">
+        <p class="sci-subject">{{item.subject}}</p>
+        <p class="sci-grade">{{valueToString(item.grade)}}</p>
+        <p class="sci-genre">{{item.genre}}</p>
+        <p class="sci-meta">
+          <a href="#">Подробнее</a>
+        </p>
+        <p class="sci-price">
+          <a href="#">{{showBonus ? item.priceBonus : item.price}}</a>
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>

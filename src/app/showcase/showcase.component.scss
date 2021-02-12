@@ -1,0 +1,215 @@
+.container {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1000px;
+
+  .u-text-center {
+    text-align: center !important;
+    font-size: 36px;
+    font-weight: 300;
+    color: #3c3c3b;
+  }
+
+  .form-container {
+    margin-top: 30px;
+    overflow: hidden;
+
+    .form {
+      overflow: hidden;
+      padding: 0 15px;
+
+      @media screen and (max-width: 36em) {
+        .select-container {
+          width: 100%;
+          padding: 0 11px 15px 0 !important;
+        }
+      }
+
+      @media screen and (min-width: 36em) and (max-width: 48em) {
+        .select-container {
+          padding: 0 11px;
+          width: 33.3%;
+
+          &:last-child {
+            width: 100%;
+            padding: 0 0 15px 0 !important;
+          }
+        }
+      }
+
+      @media screen and (min-width: 48em) {
+        .select-container {
+          width: 25%;
+        }
+      }
+
+      .select-container {
+        float: left;
+        box-sizing: border-box;
+
+        &:not(:last-child):not(:first-child) {
+          padding: 0 11px 15px;
+        }
+
+        &:first-child {
+          padding: 0 11px 15px 0;
+        }
+
+        &:last-child {
+          padding: 0 0 15px 11px;
+        }
+
+        select, input {
+          width: 100%;
+          padding: .3em .5em;
+          height: 2.3em;
+          background-color: #fff;
+          border: 1px solid #706f6f;
+          font-size: 14px;
+          border-radius: 6px;
+          box-sizing: border-box;
+        }
+
+        button {
+          display: inline-block;
+          margin-left: 6px;
+          width: 32px;
+          height: 32px;
+          line-height: normal;
+          border: 0;
+          border-radius: 4px;
+          background: #fff url("/assets/icons/icon-search-25.png") center no-repeat;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .switcher {
+    float: right;
+    margin-right: 15px;
+
+    button {
+      padding: 0.3em 0.5em;
+      height: 2.3em;
+      color: #fff;
+      border: none;
+      font-size: 14px;
+      border-radius: 6px;
+      box-sizing: border-box;
+      background-color: #00c1ff;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .courses-list {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+    margin: 60px 0 20px;
+    padding: 0;
+
+    .courses-sci {
+      float: left;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: block;
+      margin: 0 15px 55px;
+      width: 170px;
+      min-height: 260px;
+      border: solid 1px #b5b5b5;
+      border-radius: 10px;
+      background: #fff;
+
+      .sci-figure {
+        position: relative;
+        overflow: hidden;
+        height: 134px;
+        background: #ddd;
+      }
+
+      .sci-info {
+        padding: 10px 16px;
+
+        p {
+          margin: .4em 0;
+          padding-left: .5em;
+          font-size: 14px;
+          font-weight: normal;
+        }
+
+        .sci-subject {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin: 0;
+        }
+
+        .sci-grade {
+          margin-top: -.2em;
+        }
+
+        .sci-genre {
+          margin-top: -.4em;
+          font-size: 11px;
+        }
+
+        .sci-meta {
+          margin-bottom: 0;
+          font-size: 12px;
+          font-weight: 600;
+          color: #00c1ff;
+
+          a {
+            color: #00c1ff;
+            text-decoration: none;
+            background-color: transparent;
+          }
+        }
+
+        .sci-price {
+          margin-bottom: 0;
+          padding-left: 0;
+          font-size: 12px;
+          display: grid;
+
+          a {
+            padding: .4em .1em;
+            border-radius: 6px;
+            background: #00c1ff;
+            color: #fff;
+            text-decoration: none;
+
+            zoom: 1;
+            line-height: normal;
+            white-space: nowrap;
+            vertical-align: middle;
+            text-align: center;
+            cursor: pointer;
+            -webkit-user-drag: none;
+            user-select: none;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 48em) {
+    ul {
+      font-weight: 300;
+      font-size: 17.5px;
+      line-height: 22px;
+    }
+  }
+}
